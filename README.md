@@ -1,6 +1,8 @@
 PortSentry
 =========
 
+[![Build Status](https://travis-ci.org/maxlareo/ansible-portsentry.svg?branch=master)](https://travis-ci.org/maxlareo/ansible-portsentry) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-portsentry-blue.svg)](https://galaxy.ansible.com/maxlareo/portsentry/)
+
 Install and configure PortSentry in Debian-like systems
 
 Requirements
