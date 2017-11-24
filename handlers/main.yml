@@ -1,6 +1,6 @@
 ---  # handlers file for portsentry
 
 - name: restart portsentry
-  systemd:
+  service:
     name: portsentry
     state: restarted

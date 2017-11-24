@@ -38,7 +38,7 @@
     - portsentry-configuration
 
 - name: Enable portsentry daemon
-  systemd:
+  service:
     name: portsentry
     enabled: "{{ portsentry_enabled | d(true) }}"
   tags:
