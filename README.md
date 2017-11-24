@@ -59,4 +59,4 @@ Author Information
 Feedback, bug-reports, requests, ...
 ------------------------------------
 
-Are [welcome](https://github.com/maxlareo/ansible-rkhunter/issues)!
+Are [welcome](https://github.com/maxlareo/ansible-portsentry/issues)!
