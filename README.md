@@ -28,7 +28,7 @@ Role Variables
 - `portsentry_kill_route`: [default: `/sbin/iptables -I INPUT -s $TARGET$ -j DROP`]: This command is used to drop the route or add the host into a local filter table
 - `portsentry_scan_trigger`: [default: `0`]: Enter in the number of port connects you will allow before an alarm is given, the default is 0 which will react immediately
 
-### About the <è /etc/portsentry/portsentry.ignore.static` file
+### About the `/etc/portsentry/portsentry.ignore.static` file
 
 - `portsentry_ignore_static`: [default: `[]`]: Put hosts in here you never want blocked (format: ip/netmask), if you don't supply a netmask it is assumed to be 32 bits
 
