@@ -1,0 +1,47 @@
+---  # tasks file for portsentry
+
+- name: Install portsentry
+  apt:
+    name: portsentry
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+    state: present
+  tags:
+    - install
+    - portsentry
+    - portsentry-install
+
+- name: Configure /etc/portsentry/portsentry.conf
+  template:
+    src: etc/portsentry/portsentry.conf.j2
+    dest: /etc/portsentry/portsentry.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart portsentry
+  tags:
+    - configuration
+    - portsentry
+    - portsentry-configuration
+
+- name: Configure /etc/portsentry/portsentry.ignore.static
+  template:
+    src: etc/portsentry/portsentry.ignore.static.j2
+    dest: /etc/portsentry/portsentry.ignore.static
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart portsentry
+  tags:
+    - configuration
+    - portsentry
+    - portsentry-configuration
+
+- name: Enable portsentry daemon
+  systemd:
+    name: portsentry
+    enabled: "{{ portsentry_enabled | d(true) }}"
+  tags:
+    - configuration
+    - portsentry
+    - portsentry-configuration
