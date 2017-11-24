@@ -30,7 +30,7 @@ Role Variables
 
 ### About the <è /etc/portsentry/portsentry.ignore.static` file
 
-- `portsentry_ignore_static`: [default: `[]`]: Put hosts in here you never want blocked (format: <ip>/<netmask>), if you don't supply a netmask it is assumed to be 32 bits
+- `portsentry_ignore_static`: [default: `[]`]: Put hosts in here you never want blocked (format: ip/netmask), if you don't supply a netmask it is assumed to be 32 bits
 
 Dependencies
 ------------
