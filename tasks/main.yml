@@ -1,10 +1,8 @@
----  # tasks file for portsentry
-
+---
 - name: Install portsentry
   apt:
     name: portsentry
-    update_cache: true
-    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+    cache_valid_time: 3600
     state: present
   tags:
     - install
@@ -40,7 +38,7 @@
 - name: Enable portsentry daemon
   service:
     name: portsentry
-    enabled: "{{ portsentry_enabled | d(true) }}"
+    enabled: true
   tags:
     - configuration
     - portsentry

@@ -13,7 +13,6 @@ galaxy_info:
       versions:
         - xenial
         - trusty
-
   galaxy_tags:
     - portsentry
     - security

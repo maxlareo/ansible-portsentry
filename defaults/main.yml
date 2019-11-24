@@ -1,6 +1,4 @@
----  # defaults file for portsentry
-
-# /etc/portsentry/portsentry.conf
+---
 portsentry_tcp_ports: >-
   1,11,15,79,111,119,143,540,635,1080,1524,2000,5742,6667,12345,12346,20034,
   27665,31337,32771,32772,32773,32774,40421,49724,54320
@@ -18,5 +16,4 @@ portsentry_block_tcp: 0
 portsentry_kill_route: /sbin/iptables -I INPUT -s $TARGET$ -j DROP
 portsentry_scan_trigger: 0
 
-# /etc/portsentry/portsentry.ignore.static
 portsentry_ignore_static: []

@@ -1,5 +1,4 @@
----  # handlers file for portsentry
-
+---
 - name: restart portsentry
   service:
     name: portsentry
